@@ -17,7 +17,7 @@ turn tabled predicates into explicit memo tables (the MNN way) and compare. A me
 `proofs/theorems.pl` proves 5 theorems by exhaustion: each one is checked for every case in a finite domain that covers every branch of the definitions. Fibonacci of 0..18; every directed graph on nodes a, b, c (all 512 edge sets).
 
 1. The memo table gives the same Fibonacci numbers as plain recursion.
-2. The table has exactly one entry per K =< N, and each is right.
+2. The table has exactly one entry per K =< N (for N >= 2: below that only the base case is needed), and each is right.
 3. Without a table the calls grow much faster than the N + 1 entries (more than double from N = 5 on).
 4. The fixpoint finds exactly the pairs breadth-first search does, on every graph, cycles included.
 5. The fixpoint ends within as many rounds as there are nodes.
